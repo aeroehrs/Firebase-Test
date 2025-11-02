@@ -15,8 +15,11 @@ function writeData(path, value) {
   db.ref(path).set(value);
 }
 
-function readData(path, callback) {
-  db.ref(path).on("value", s => callback(s.val()));
+function readData(path, callback, defaultValue = 0) {
+  db.ref(path).on("value", s => {
+    const v = s.val();
+    callback(v ?? defaultValue);
+  });
 }
 
 function startCanvas() {
