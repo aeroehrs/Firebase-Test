@@ -29,7 +29,3 @@ function draw() {
 function mousePressed() {
   writeData("testcount", serverCount + 1);
 }
-
-function keyPressed() {
-  writeData("testcount", 0);
-}
