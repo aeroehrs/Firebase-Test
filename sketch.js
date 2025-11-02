@@ -1,5 +1,5 @@
-let width = 1600;
-let height = 900;
+let width = 500;
+let height = 1000;
 let fringecolor = [0, 0, 0];
 let backgroundcolor = [50, 50, 50];
 
