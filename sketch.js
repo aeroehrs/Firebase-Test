@@ -36,17 +36,19 @@ function draw() {
 }
 
 function mousePressed() {
-  if (mx < 250) {
-    if (my < 750) {
-      writeData("countL", countL + 1);
+  if ((mx > 0) && (mx < width) && (my > 0) && (my < height)) {
+    if (mx < 250) {
+      if (my < 750) {
+        writeData("countL", countL + 1);
+      } else {
+        writeData("countL", 0);
+      }
     } else {
-      writeData("countL", 0);
-    }
-  } else {
-    if (my < 750) {
-      writeData("countR", countR + 1);
-    } else {
-      writeData("countR", 0);
+      if (my < 750) {
+        writeData("countR", countR + 1);
+      } else {
+        writeData("countR", 0);
+      }
     }
   }
 }
