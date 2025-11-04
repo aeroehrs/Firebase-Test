@@ -42,7 +42,8 @@ function startCanvas() {
     my = (mouseY - (windowHeight - height * sf) / 2) / sf;
   }
 
-  fill(backgroundcolor[0], backgroundcolor[1], backgroundcolor[2]);
+  //fill(backgroundcolor[0], backgroundcolor[1], backgroundcolor[2]);
+  fill(myColor[0], PLAYER_SAT, 8);
   noStroke();
   rect(0, 0, width, height);
 }
